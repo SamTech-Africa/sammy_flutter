@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
-import 'package:sammy_flutter/src/features/authentication/screens/onboarding_screen.dart';
+import 'package:sammy_flutter/src/features/authentication/screens/onboarding/onboarding_screen.dart';
 import 'package:sammy_flutter/src/features/authentication/screens/welcome_screen.dart';
 
 class SplashScreenController extends GetxController{

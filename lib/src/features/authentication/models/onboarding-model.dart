@@ -6,6 +6,7 @@ class OnboardingModel {
   final String subtitle;
   final String counterText;
   final Color bgColor;
+  final double height;
 
 
   OnboardingModel({
@@ -14,6 +15,7 @@ class OnboardingModel {
     required this.subtitle,
     required this.counterText,
     required this.bgColor,
+    required this.height,
 });
 
 }
