@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:sammy_flutter/src/features/authentication/screens/splash_screen.dart';
 import 'package:sammy_flutter/src/utils/theme/theme.dart';
 
@@ -12,12 +13,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: const SplashScreen()
+      home: SplashScreen()
     );
   }
 }
