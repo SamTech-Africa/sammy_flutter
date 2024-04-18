@@ -12,3 +12,7 @@ const String tOnboardingSubTitle3 = "Save time by just copy pasting complete app
 const String tOnboardingCounter1 = "1/3";
 const String tOnboardingCounter2 = "2/3";
 const String tOnboardingCounter3 = "3/3";
+
+//Welcome Screen Text
+const String tWelcomeTitle = "Build Awesome Apps";
+const String tWelcomeSubtitle = "Let's put your creativity on the development, craft apps";

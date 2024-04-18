@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sammy_flutter/src/constants/image_strings.dart';
+import 'package:sammy_flutter/src/constants/text_strings.dart';
 
 
 class WelcomeScreen extends StatelessWidget {
@@ -6,9 +8,20 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('This is the Welcome Screen'),
+    return Scaffold(
+      body: Container(
+        child: const Column(
+          children: [
+            Image(image: AssetImage(banner)),
+            Text(tWelcomeTitle),
+            Text(tWelcomeSubtitle),
+            Row(
+              children: [
+                // OutlinedButton(onPressed: () {}, child: Text('Login'))
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
