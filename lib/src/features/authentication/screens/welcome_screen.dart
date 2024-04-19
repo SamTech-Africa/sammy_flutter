@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sammy_flutter/src/constants/colors.dart';
 import 'package:sammy_flutter/src/constants/image_strings.dart';
 import 'package:sammy_flutter/src/constants/sizes.dart';
 import 'package:sammy_flutter/src/constants/text_strings.dart';
@@ -32,12 +33,22 @@ class WelcomeScreen extends StatelessWidget {
                Expanded(
                    child:  OutlinedButton(
                        onPressed: (){},
+
                        child: Text(tLogin.toUpperCase())
                    ),
                ),
+                const SizedBox(height: 10.0,),
                 Expanded(
                     child:   ElevatedButton(
                         onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            elevation: 0,
+                            shape: const RoundedRectangleBorder(),
+                            foregroundColor: tWhiteColor,
+                            backgroundColor: tSecondaryColor,
+                            side: const BorderSide(color: tSecondaryColor),
+                            padding: const EdgeInsets.symmetric(vertical: tButtonHeight)
+                        ),
                         child: Text(tSignup.toUpperCase())
                     ),
                 ),

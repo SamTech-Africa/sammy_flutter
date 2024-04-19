@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sammy_flutter/src/utils/theme/widget_themes/elevated_button_theme.dart';
 import 'package:sammy_flutter/src/utils/theme/widget_themes/text_teme.dart';
 
 class TAppTheme {
@@ -9,7 +10,8 @@ class TAppTheme {
 
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    textTheme: TTextTheme.lightTextTheme
+    textTheme: TTextTheme.lightTextTheme,
+    outlinedButtonTheme: TOutlinedButtonThem.lightElevatedButtonTheme,
   );
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
