@@ -16,3 +16,7 @@ const String tOnboardingCounter3 = "3/3";
 //Welcome Screen Text
 const String tWelcomeTitle = "Build Awesome Apps";
 const String tWelcomeSubtitle = "Let's put your creativity on the development, craft apps";
+
+//Generic Text
+const String tLogin = "Login";
+const String tSignup = "Signup";
