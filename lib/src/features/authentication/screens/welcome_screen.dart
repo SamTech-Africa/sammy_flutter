@@ -9,23 +9,38 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(tDefaultSize),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Image(image: AssetImage(banner)),
+            Image(image: const AssetImage(banner), height: height * 0.6,),
             Column(
              children: [
                Text(tWelcomeTitle, style: Theme.of(context).textTheme.titleLarge,),
-               Text(tWelcomeSubtitle, style: Theme.of(context).textTheme.bodyLarge,),
+               Text(
+                 tWelcomeSubtitle,
+                 style: Theme.of(context).textTheme.bodyLarge,
+                 textAlign: TextAlign.center,
+               ),
              ],
             ),
             Row(
               children: [
-                OutlinedButton(onPressed: (){}, child: const Text(tLogin)),
-                ElevatedButton(onPressed: () {}, child: const Text(tSignup))
+               Expanded(
+                   child:  OutlinedButton(
+                       onPressed: (){},
+                       child: Text(tLogin.toUpperCase())
+                   ),
+               ),
+                Expanded(
+                    child:   ElevatedButton(
+                        onPressed: () {},
+                        child: Text(tSignup.toUpperCase())
+                    ),
+                ),
               ],
             )
           ],
