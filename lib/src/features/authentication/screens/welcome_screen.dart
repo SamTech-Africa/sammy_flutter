@@ -10,8 +10,13 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
+    var mediaQuery = MediaQuery.of(context);
+    var brightness = mediaQuery.platformBrightness;
+    var height = mediaQuery.size.height;
+    final isDarkMode = brightness == Brightness.dark;
+
     return Scaffold(
+      backgroundColor: isDarkMode ? tSecondaryColor : tPrimaryColor,
       body: Container(
         padding: const EdgeInsets.all(tDefaultSize),
         child: Column(
@@ -41,14 +46,7 @@ class WelcomeScreen extends StatelessWidget {
                 Expanded(
                     child:   ElevatedButton(
                         onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                            elevation: 0,
-                            shape: const RoundedRectangleBorder(),
-                            foregroundColor: tWhiteColor,
-                            backgroundColor: tSecondaryColor,
-                            side: const BorderSide(color: tSecondaryColor),
-                            padding: const EdgeInsets.symmetric(vertical: tButtonHeight)
-                        ),
+
                         child: Text(tSignup.toUpperCase())
                     ),
                 ),
